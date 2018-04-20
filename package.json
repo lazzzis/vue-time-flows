@@ -2,8 +2,15 @@
   "name": "vue-time-flows",
   "version": "0.1.0",
   "description": "A vue component that allows you to format current time",
-  "main": "dist/main.js",
-  "author": "lazzzis",
+  "main": "dist/vue-time-flows.js",
+  "author": {
+    "name": "lazzzis",
+    "email": "lazzzis@outlook.com",
+    "url": "github.com/lazzzis"
+  },
+  "engines": {
+    "node": ">=4"
+  },
   "license": "MIT",
   "devDependencies": {
     "bili": "^3.1.0",
@@ -13,5 +20,9 @@
   "scripts": {
     "build": "bili --format umd --module-name VueTimeFlows",
     "dev": "poi"
-  }
+  },
+  "keywords": [
+    "time",
+    "vue"
+  ]
 }
