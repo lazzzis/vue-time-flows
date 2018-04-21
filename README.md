@@ -59,6 +59,24 @@ Vue.use(VueTimeFlows, {
   format: (val) => new Date(val).toLocaleString() // same as `format` in props api
 })
 ```
+## Development
+
+```bash
+# for dev
+$ yarn
+$ yarn dev
+
+# for deploy docs
+$ yarn run deploy
+```
+
+## Why not add `moment` / `luxon` to support built-in format features?
+
+Both `moment` and `luxon` are excellent libraries to parse and format datetime. But in most cases, I don't want to add a dependency on a project which has depended on `moment` or `luxon`.
+
+For example, if `vue-time-flows` depends on `moment` and I am working on a project depending on `luxon`, installing `vue-time-flows` means that this project would depends on both `moment` and `luxon`. But `moment` and `luxon` has almost same functionality and depending both two would lead to a larger distribution size.
+
+So, instead, `vue-time-flows` provides a `format` for users to customize format.
 
 # License
 
