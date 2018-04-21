@@ -23,8 +23,10 @@ Vue.use(VueTimeFlows)
 ```html
 <template>
   <div>
+    <!-- simple usage -->
     <p>Begins at Now:  <VueTimeFlows> </p>
-    <p>Begins at 2017-01-01:  <VueTimeFlows> </p>
+    <!-- define an initial time -->
+    <p>Begins at 2017-01-01:  <VueTimeFlows :now="now"> </p>
   </div>
 </template>
 <script>
@@ -66,15 +68,15 @@ Vue.use(VueTimeFlows, {
 $ yarn
 $ yarn dev
 
-# for deploy docs
+# for deploying docs
 $ yarn run deploy
 ```
 
 ## Why not add `moment` / `luxon` to support built-in format features?
 
-Both `moment` and `luxon` are excellent libraries to parse and format datetime. But in most cases, I don't want to add a dependency on a project which has depended on `moment` or `luxon`.
+Both `moment` and `luxon` are excellent libraries to parse and format datetime. But in most cases, I don't want to add another dependency on a project which has depended on `moment` or `luxon`.
 
-For example, if `vue-time-flows` depends on `moment` and I am working on a project depending on `luxon`, installing `vue-time-flows` means that this project would depends on both `moment` and `luxon`. But `moment` and `luxon` has almost same functionality and depending both two would lead to a larger distribution size.
+For example, if `vue-time-flows` depends on `moment` and I am working on a project depending on `luxon`, installing `vue-time-flows` means that this project would depend on both `moment` and `luxon`. But `moment` and `luxon` have almost the same functionality and depending both two would lead to a larger bundle size.
 
 So, instead, `vue-time-flows` provides a `format` for users to customize format.
 
