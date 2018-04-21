@@ -1,12 +1,19 @@
 {
   "name": "vue-time-flows",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A vue component that allows you to format current time",
   "main": "dist/vue-time-flows.js",
+  "files": [
+    "dist"
+  ],
   "author": {
     "name": "lazzzis",
     "email": "lazzzis@outlook.com",
     "url": "github.com/lazzzis"
+  },
+  "repository": {
+    "url": "lazzzis/vue-time-flows",
+    "type": "git"
   },
   "engines": {
     "node": ">=4"
