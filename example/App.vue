@@ -22,7 +22,7 @@
 
     <h2>Define Update Interval</h2>
     <b>Update on every 2 seconds</b> <VueTimeFlows :period="2000" />
-    <Highlight :code="codes['BasicDefineFormatFunction']" />
+    <Highlight :code="codes['BasicDefineUpdateInterval']" />
 
     <h2>Set Default Values</h2>
     <Highlight :code="codes['SetDefaultValuesImport']" />
@@ -33,7 +33,7 @@
 
     <h2>Create Instances</h2>
     <p><code>createInstance</code> could help you create various components with different default Values</p>
-    <Highlight :code="codes['CreateInstance']" />
+    <Highlight language="html" :code="codes['CreateInstance']" />
     <Update2Seconds /> <br>
     <ISOFormat /> <br>
     <ISOFormat :now="new Date('2020-01-01').getTime()" />
@@ -44,13 +44,9 @@
   import { createInstance } from '../src/'
   import { DateTime } from 'luxon'
   import 'github-markdown-css'
-  import hljs from 'highlight.js'
   import Highlight from 'vue-highlight-component'
   import 'highlight.js/styles/atom-one-light.css'
   import GitHubBadge from 'vue-github-badge'
-
-  hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
-  hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))
 
   const codes = {
     BasicUsage: `<VueTimeFlows />`,
@@ -104,8 +100,8 @@
     CreateInstance: `
     <template>
       <div>
-        <Update2Seconds /> <br>
-        <ISOFormat /> <br>
+        <Update2Seconds /> <br />
+        <ISOFormat /> <br />
         <ISOFormat :now="new Date('2020-01-01').getTime()" />
       </div>
     </template>
