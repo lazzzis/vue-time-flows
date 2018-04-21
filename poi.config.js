@@ -1,6 +1,7 @@
 module.exports = {
   entry: 'example',
-  dist: 'example/dist',
+  outDir: 'example/dist/',
+  homepage: '/vue-time-flows/',
   babel: {
     jsx: 'vue'
   }
