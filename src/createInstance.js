@@ -34,11 +34,13 @@ export default function createInstance (options = {}) {
     beforeDestroy () {
       clearInterval(this.timer)
     },
-    render () {
+    render (h) {
       const time = this.format(this.currentTime)
-      return (
-        <span class='vue-time-flows'>{ time }</span>
-      )
+      return h('span', {
+        class: 'vue-time-flows'
+      }, [
+        time
+      ])
     }
   }
   return VueTimeFlows
