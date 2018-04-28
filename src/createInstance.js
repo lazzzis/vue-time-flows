@@ -36,11 +36,9 @@ export default function createInstance (options = {}) {
     },
     render (h) {
       const time = this.format(this.currentTime)
-      return h('span', {
-        class: 'vue-time-flows'
-      }, [
-        time
-      ])
+      return (
+        <span class='vue-time-flows'>{time}</span>
+      )
     }
   }
   return VueTimeFlows
